@@ -9,8 +9,12 @@
 
   <!-- profile logo 个人资料徽标 -->
   <div align="center">
-    <!-- visitor statistics logo 访问量统计徽标 -->
+   <span > 
+   <img src="https://camo.githubusercontent.com/78269cd9200d5e1a6e180a1cf81528cc2daf07744b86b4238263771fb3e97759/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5765436861742de5beaee4bfa12d303763313630" data-canonical-src="https://img.shields.io/badge/WeChat-微信-07c160" style="max-width: 100%;">
+   </span>
+     <!-- visitor statistics logo 访问量统计徽标 -->
     <img src="https://komarev.com/ghpvc/?username=Jensen0925&label=Views&color=0e75b6&style=flat" alt="访问量统计" />
+   <img src="https://github.com/heartyang520/HeartYang.github.io/raw/main/share/duck.gif?raw=true" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage">
   </div>
 
 <!-- GitHub 数据统计 -->
