@@ -22,8 +22,8 @@
 <img align="" height="137px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jensen0925&hide_title=true&hide_border=true&layout=compact&langs_count=6&theme=tokyonight" /><br><br>
 <!-- Snake Code Contribution Map 贪吃蛇代码贡献图 -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://purge.jsdelivr.net/gh/Jensen0925/Jensen0925/profile-snake-contrib/github-user-contribution-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://purge.jsdelivr.net/gh/Jensen0925/Jensen0925/profile-snake-contrib/github-user-contribution.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Jensen0925/Jensen0925/profile-snake-contrib/github-user-contribution-dark.svg?v=20250802" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Jensen0925/Jensen0925/profile-snake-contrib/github-user-contribution.svg?v=20250802" />
   <img alt="github-snake" src="https://cdn.jsdelivr.net/gh/Jensen0925/Jensen0925/profile-snake-contrib/github-user-contribution.svg" />
 </picture>
 
