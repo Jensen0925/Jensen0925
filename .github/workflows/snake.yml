@@ -1,0 +1,46 @@
+name: Generate Snake Contribution Graph
+
+on:
+  # 每天自动跑一次，保持贡献图是新鲜的
+  schedule:
+    - cron: "0 0 * * *"
+  # 允许在 Actions 页面手动触发
+  workflow_dispatch:
+  # push 到 main 时也重新生成
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate snake SVGs
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-user-contribution.svg
+            dist/github-user-contribution-dark.svg?palette=github-dark
+
+      - name: Commit SVGs into profile-snake-contrib/
+        run: |
+          set -e
+          mkdir -p profile-snake-contrib
+          cp dist/github-user-contribution.svg profile-snake-contrib/github-user-contribution.svg
+          cp dist/github-user-contribution-dark.svg profile-snake-contrib/github-user-contribution-dark.svg
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- profile-snake-contrib; then
+            echo "No contribution changes, skipping commit."
+          else
+            git add profile-snake-contrib
+            git commit -m "chore: update contribution snake [skip ci]"
+            git push
+          fi
